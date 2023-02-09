@@ -1,4 +1,5 @@
-The aim of this project was to make a parser and interpreter for a language which uses the following grammar:
+> The aim of this project was to make a parser and interpreter for a simple language (see bottom of this file).
+> general.c, general.h and the Makefile were provided
 
 # (N)eill's (U)n(C)ommon (L)isp (E)xpression (I)nterpreter
 <PROG>     ::= "(" <INSTRCTS>
