@@ -1,0 +1,31 @@
+**Testing strategy**
+I have included a test.ncl file which demonstrates all the grammar and shows that parse and interp successfully print output files.
+
+By creating a second Program data structure in my test function, I can test each function individually.
+
+//Flags//
+Three of the flags in my Program data structure are just for testing purposes. These are as follows:
+
+- enable_error_messages - set to 0 during testing so that I can test cases which do not obey grammar without exiting
+- parsing_failure - set to 1 if parsing fails
+- interp_failure - set to 1 if interpreting fails
+
+//Tokeniser//
+- Demonstrate that spaces are removed from strings, unless within a pair of quotes or double quotes
+- Demonstrate that if invalid characters are entered (such as lowercase letters outside of strings), code will abort
+- Demonstrate that each keyword from the grammar is successfully recognised
+- Show that string is successfully tokenised, and tokens are stored in order with correct names and values
+
+//Parser//
+- Test each of my parsing functions individually, demonstrating that only correct grammar is parsed successfully
+- Test every part of the grammar
+- If there is an error in the grammar, then parsing_failure flag is set to one and my Prog function returns false
+
+//Interpreter//
+- Test all interp functions individually
+- Fully test my stack functions, Push and Pop. Demonstrate that strings are stored and retrieved first in, last out
+- Demonstrate that set function successfully stores variables with the name specified by code. Show that values stored in variables can be overwritten, and variables can be set to other variables (e.g. (SET A B))
+- interp_failure flag is set to 1 if an unset variable is referenced (e.g. PRINT B would fail if B had not been set)
+- Demonstrate functionality of all interp functions
+- Show that boolfunc tests set bool_output flag to 0 or 1 correctly
+
